@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View } from 'react-native';
+import Title from './SRC/components/Title';
+import Main from './SRC/components/Main';
 
 export default function App() {
-  return (
+  return(
     <View style={styles.container}>
-      <Text>Julia e Ana</Text>
-      <StatusBar style="auto" />
+ 
+<Title/>
+<Main/>
     </View>
   );
 }
