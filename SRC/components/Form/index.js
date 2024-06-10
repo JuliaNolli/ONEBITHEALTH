@@ -1,6 +1,5 @@
 import { View, TextInput, Button, Text } from "react-native";
-import React, { UseState, useState } from "react"; 
-import ResultImc0 from "./ResultImc";
+import React, {  useState } from "react"; 
 import ResultImc from "./ResultImc";
 export default function Form(){
 
@@ -36,22 +35,28 @@ export default function Form(){
         <View>
             <Text>Altura</Text>
             <TextInput
+            onChangeText={setAltura}
+            value={altura}
             placeholder="EX. 1.80"
             keyboardType="Numeric"
             />
 
         <Text>Peso</Text>
             <TextInput
+            onChangeText={setPeso}
+            value={peso}
             placeholder="EX. 75.5"
             keyboardType="Numeric"
             />
 
-            <Button title={textButton}/>
+            <Button 
+            onPress={() => validation}
+            title={textButton}/>
 
         </View>
          <ResultImc
-         setMessageImc={messageIMC}
-         ResultImc={imc}
+         messageResultImc={messageIMC}
+         resultImc={imc}
          />
       </View>
     );
